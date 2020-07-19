@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Leado</string>
+    <string name="login"><u>Log In</u></string>
 </resources>
