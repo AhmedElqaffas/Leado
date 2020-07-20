@@ -40,7 +40,7 @@
             tools:text="Support Systems" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView_lessonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -65,7 +65,7 @@
             app:layout_constraintBottom_toTopOf="@+id/button_start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView_lessonName"
             tools:text="Building an integral support system, Pushes you to grow, strech more, mainly asks why things wont work, and bullet proofs ideas" />
 
         <Button
@@ -75,7 +75,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/progress_drawable_solid"
+            android:background="@drawable/rounded_background_active"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:text="Start"

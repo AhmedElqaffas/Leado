@@ -146,7 +146,7 @@
         android:layout_width="32dp"
         android:layout_height="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/progress_drawable_solid"
+        android:background="@drawable/rounded_background_active"
         app:layout_constraintEnd_toStartOf="@+id/lesson2_progress"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/textView_roomName"
@@ -156,7 +156,7 @@
         android:id="@+id/lesson2_progress"
         android:layout_width="32dp"
         android:layout_height="8dp"
-        android:background="@drawable/progress_drawable_empty"
+        android:background="@drawable/rounded_background_inactive"
         app:layout_constraintEnd_toStartOf="@+id/lesson3_progress"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/lesson1_progress"
@@ -166,7 +166,7 @@
         android:id="@+id/lesson3_progress"
         android:layout_width="32dp"
         android:layout_height="8dp"
-        android:background="@drawable/progress_drawable_empty"
+        android:background="@drawable/rounded_background_inactive"
         app:layout_constraintEnd_toStartOf="@+id/lesson4_progress"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/lesson2_progress"
@@ -176,7 +176,7 @@
         android:id="@+id/lesson4_progress"
         android:layout_width="32dp"
         android:layout_height="8dp"
-        android:background="@drawable/progress_drawable_empty"
+        android:background="@drawable/rounded_background_inactive"
         app:layout_constraintEnd_toStartOf="@+id/lesson5_progress"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/lesson3_progress"
@@ -186,7 +186,7 @@
         android:id="@+id/lesson5_progress"
         android:layout_width="32dp"
         android:layout_height="8dp"
-        android:background="@drawable/progress_drawable_empty"
+        android:background="@drawable/rounded_background_inactive"
         app:layout_constraintEnd_toEndOf="@+id/textView_roomName"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/lesson4_progress"
@@ -230,18 +230,18 @@
         app:srcCompat="@drawable/ic_checked" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lessons_recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_courseName"
-        tools:listitem="@layout/item_lesson"
-        android:scrollbars="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal"
-        />
+        tools:listitem="@layout/item_lesson" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
