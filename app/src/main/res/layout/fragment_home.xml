@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".mainNavigation.Fragments.HomeFragment"
+    android:background="#d2fcfa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d2fcfa">
+    android:fillViewport="true">
+    
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="#d2fcfa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/line1"
         android:layout_width="175dp"
         android:layout_height="92dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="124dp"
         android:src="@drawable/line"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,10 +31,11 @@
         android:id="@+id/selfAwareness"
         android:layout_width="118dp"
         android:layout_height="76dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/self_awarness_icon"
-        app:layout_constraintBottom_toTopOf="@+id/line1"
-        app:layout_constraintStart_toEndOf="@+id/clouds" />
+        app:layout_constraintStart_toEndOf="@+id/clouds"
+        app:layout_constraintTop_toBottomOf="@+id/mindIcon" />
 
     <ImageView
         android:id="@+id/clouds"
@@ -94,17 +102,17 @@
         android:id="@+id/mountains"
         android:layout_width="221dp"
         android:layout_height="155dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="84dp"
         android:src="@drawable/mountains"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toEndOf="@+id/line3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/line5"
-        android:layout_width="95dp"
+        android:layout_width="96dp"
         android:layout_height="3dp"
         android:layout_marginBottom="24dp"
         android:background="#1f314a"
@@ -126,19 +134,19 @@
         android:id="@+id/line7"
         android:layout_width="30dp"
         android:layout_height="140dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="181dp"
         android:rotation="270"
         android:src="@drawable/line2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tree"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toEndOf="@+id/selfAwareness" />
 
     <Button
         android:id="@+id/selfAwarenessBtn"
         android:layout_width="118dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="180dp"
         android:background="@drawable/white_round_button_background"
         android:text="Self-Awareness"
         android:textAllCaps="false"
@@ -146,14 +154,14 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/mindBtn"
         android:layout_width="118dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="308dp"
+        android:layout_marginBottom="332dp"
         android:background="@drawable/white_round_button_background"
         android:text="Mind-Mapping"
         android:textAllCaps="false"
@@ -168,17 +176,17 @@
         android:id="@+id/personalBtn"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="232dp"
         android:background="@drawable/white_round_button_background"
         android:text="Personal-Branding"
         android:textAllCaps="false"
         android:textColor="#1f314a"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
+</ScrollView>
