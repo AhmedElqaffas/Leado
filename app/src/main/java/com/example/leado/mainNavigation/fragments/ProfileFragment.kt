@@ -1,4 +1,4 @@
-package com.example.leado.mainNavigation.Fragments
+package com.example.leado.mainNavigation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -55,7 +55,22 @@ class ProfileFragment : Fragment() {
             Achievement(
                 R.drawable.achievement1_icon, "LAST ONE",
                 "I HOPE"
+            ),
+
+            Achievement(
+                R.drawable.achievement1_icon, "LAST ONE",
+                "I HOPE"
+            ),
+            Achievement(
+                R.drawable.achievement1_icon, "LAST ONE",
+                "I HOPE"
+            ),
+
+            Achievement(
+                R.drawable.achievement1_icon, "LAST ONE",
+                "I HOPE"
             )
+
         )
 
         profileAchievementsRecyclerView.adapter = AchievementsRecyclerAdapter(temporaryList)

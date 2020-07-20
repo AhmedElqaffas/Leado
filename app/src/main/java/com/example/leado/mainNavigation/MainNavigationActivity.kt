@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.example.leado.R
-import com.example.leado.mainNavigation.Fragments.AchievementsFragment
-import com.example.leado.mainNavigation.Fragments.HomeFragment
-import com.example.leado.mainNavigation.Fragments.ProfileFragment
+import com.example.leado.mainNavigation.fragments.achievements.AchievementsFragment
+import com.example.leado.mainNavigation.fragments.HomeFragment
+import com.example.leado.mainNavigation.fragments.ProfileFragment
 import com.example.leado.viewpagerAdapters.MainNavigationViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main_navigation.*
 
