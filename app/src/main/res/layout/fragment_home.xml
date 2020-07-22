@@ -9,291 +9,304 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    android:background="#d2fcfa"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/userInfoCardView"
-        android:layout_width="330dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        app:cardCornerRadius="27dp"
-        app:cardElevation="4dp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d2fcfa">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.423">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                android:layout_width="40dp"
-                android:layout_height="37dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="0.3dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/ic_launcher_background" />
-
-            <TextView
-                android:id="@+id/yourJourneyText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:textColor="#1f314a"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                app:layout_constraintStart_toEndOf="@+id/profile_image"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="Yourself Journey" />
-
-            <TextView
-                android:id="@+id/journeyPercentageText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="4dp"
-                android:text="30%"
-                android:textColor="#22d0c4"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/yourJourneyText"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/rankText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="4dp"
-                android:gravity="end"
-                android:text="Rank : 3rd"
-                android:textColor="#1f314a"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/userInfoCardView"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:visibility="visible"
+                app:cardCornerRadius="27dp"
+                app:cardElevation="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.85"
-                app:layout_constraintStart_toEndOf="@+id/achievementImg3" />
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="40dp"
+                        android:layout_height="37dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/ic_launcher_background"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0.3dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/yourJourneyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="Yourself Journey"
+                        android:textColor="#1f314a"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/profile_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/journeyPercentageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="4dp"
+                        android:text="30%"
+                        android:textColor="#22d0c4"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/yourJourneyText"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rankText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="end"
+                        android:text="Rank : 3rd"
+                        android:textColor="#1f314a"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.85"
+                        app:layout_constraintStart_toEndOf="@+id/achievementImg3" />
+
+                    <ImageView
+                        android:id="@+id/achievementImg1"
+                        android:layout_width="31dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/achievement1_icon"
+                        app:layout_constraintStart_toEndOf="@+id/profile_image"
+                        app:layout_constraintTop_toBottomOf="@+id/yourJourneyText" />
+
+                    <ImageView
+                        android:id="@+id/achievementImg2"
+                        android:layout_width="31dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/achievement2_icon"
+                        app:layout_constraintStart_toEndOf="@+id/achievementImg1"
+                        app:layout_constraintTop_toBottomOf="@+id/yourJourneyText" />
+
+                    <ImageView
+                        android:id="@+id/achievementImg3"
+                        android:layout_width="31dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/achievement4_icon"
+                        app:layout_constraintStart_toEndOf="@+id/achievementImg2"
+                        app:layout_constraintTop_toBottomOf="@+id/yourJourneyText" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <ImageView
-                android:id="@+id/achievementImg1"
-                android:layout_width="31dp"
-                android:layout_height="22dp"
+                android:id="@+id/line1"
+                android:layout_width="175dp"
+                android:layout_height="92dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.067"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selfAwareness"
+                app:layout_editor_absoluteY="600dp" />
+
+            <ImageView
+                android:id="@+id/selfAwareness"
+                android:layout_width="118dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="60dp"
+                android:src="@drawable/self_awarness_icon"
+                app:layout_constraintEnd_toStartOf="@+id/tree"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/clouds"
+                app:layout_constraintTop_toBottomOf="@+id/mindIcon" />
+
+            <ImageView
+                android:id="@+id/clouds"
+                android:layout_width="73dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/clouds"
+                app:layout_constraintBottom_toBottomOf="@+id/selfAwareness"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/tree"
+                android:layout_width="62dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/tree"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lines" />
+
+            <ImageView
+                android:id="@+id/mindIcon"
+                android:layout_width="155dp"
+                android:layout_height="86dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="60dp"
+                android:src="@drawable/mind_icon"
+                app:layout_constraintEnd_toStartOf="@+id/lines"
+                app:layout_constraintTop_toBottomOf="@+id/mountains" />
+
+            <ImageView
+                android:id="@+id/lines"
+                android:layout_width="32dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="56dp"
+                android:src="@drawable/lines"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mountains" />
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="70dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="69dp"
+                android:layout_marginBottom="112dp"
+                android:src="@drawable/line2"
+                app:layout_constraintBottom_toTopOf="@+id/clouds"
+                app:layout_constraintEnd_toStartOf="@+id/mindIcon"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="61dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/line3"
+                app:layout_constraintBottom_toTopOf="@+id/line2"
+                app:layout_constraintEnd_toStartOf="@+id/mountains"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/mountains"
+                android:layout_width="221dp"
+                android:layout_height="155dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="68dp"
+                android:src="@drawable/mountains"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoCardView" />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="96dp"
+                android:layout_height="3dp"
+                android:layout_marginBottom="24dp"
+                android:background="#1f314a"
+                app:layout_constraintBottom_toBottomOf="@+id/mindIcon"
+                app:layout_constraintEnd_toStartOf="@+id/line6" />
+
+            <ImageView
+                android:id="@+id/line6"
+                android:layout_width="46dp"
+                android:layout_height="146dp"
                 android:layout_marginStart="21dp"
-                android:layout_marginTop="1dp"
-                android:src="@drawable/achievement1_icon"
-                app:layout_constraintStart_toEndOf="@+id/profile_image"
-                app:layout_constraintTop_toBottomOf="@+id/yourJourneyText" />
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="8dp"
+                android:rotation="180"
+                android:src="@drawable/line2"
+                app:layout_constraintEnd_toStartOf="@+id/tree"
+                app:layout_constraintStart_toEndOf="@+id/selfAwareness"
+                app:layout_constraintTop_toBottomOf="@+id/mountains" />
 
             <ImageView
-                android:id="@+id/achievementImg2"
-                android:layout_width="31dp"
-                android:layout_height="22dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="1dp"
-                android:src="@drawable/achievement2_icon"
-                app:layout_constraintStart_toEndOf="@+id/achievementImg1"
-                app:layout_constraintTop_toBottomOf="@+id/yourJourneyText" />
+                android:id="@+id/line7"
+                android:layout_width="30dp"
+                android:layout_height="140dp"
+                android:rotation="270"
+                android:src="@drawable/line2"
+                app:layout_constraintEnd_toStartOf="@+id/tree"
+                app:layout_constraintHorizontal_bias="0.375"
+                app:layout_constraintStart_toEndOf="@+id/selfAwareness"
+                app:layout_constraintTop_toBottomOf="@+id/mindBtn" />
 
-            <ImageView
-                android:id="@+id/achievementImg3"
-                android:layout_width="31dp"
-                android:layout_height="22dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="1dp"
-                android:src="@drawable/achievement4_icon"
-                app:layout_constraintStart_toEndOf="@+id/achievementImg2"
-                app:layout_constraintTop_toBottomOf="@+id/yourJourneyText" />
+            <Button
+                android:id="@+id/selfAwarenessBtn"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/white_round_button_background"
+                android:text="Self-Awareness"
+                android:textAllCaps="false"
+                android:textColor="#1f314a"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.597"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/selfAwareness" />
+
+            <Button
+                android:id="@+id/mindBtn"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/white_round_button_background"
+                android:text="Mind-Mapping"
+                android:textAllCaps="false"
+                android:textColor="#1f314a"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mindIcon" />
+
+            <Button
+                android:id="@+id/personalBtn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="132dp"
+                android:background="@drawable/white_round_button_background"
+                android:text="Personal-Branding"
+                android:textAllCaps="false"
+                android:textColor="#1f314a"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.718"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mountains" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/line1"
-        android:layout_width="175dp"
-        android:layout_height="92dp"
-        android:src="@drawable/line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selfAwareness"
-        app:layout_editor_absoluteY="600dp" />
-
-    <ImageView
-        android:id="@+id/selfAwareness"
-        android:layout_width="118dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:src="@drawable/self_awarness_icon"
-        app:layout_constraintStart_toEndOf="@+id/clouds"
-        app:layout_constraintTop_toBottomOf="@+id/mindIcon" />
-
-    <ImageView
-        android:id="@+id/clouds"
-        android:layout_width="73dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/clouds"
-        app:layout_constraintBottom_toBottomOf="@+id/selfAwareness"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/tree"
-        android:layout_width="62dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/tree"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lines" />
-
-    <ImageView
-        android:id="@+id/mindIcon"
-        android:layout_width="155dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="60dp"
-        android:src="@drawable/mind_icon"
-        app:layout_constraintEnd_toStartOf="@+id/lines"
-        app:layout_constraintTop_toBottomOf="@+id/mountains" />
-
-    <ImageView
-        android:id="@+id/lines"
-        android:layout_width="32dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="56dp"
-        android:src="@drawable/lines"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mountains" />
-
-    <ImageView
-        android:id="@+id/line2"
-        android:layout_width="70dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="69dp"
-        android:layout_marginBottom="112dp"
-        android:src="@drawable/line2"
-        app:layout_constraintBottom_toTopOf="@+id/clouds"
-        app:layout_constraintEnd_toStartOf="@+id/mindIcon"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/line3"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="12dp"
-        android:src="@drawable/line3"
-        app:layout_constraintBottom_toTopOf="@+id/line2"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/mountains"
-        android:layout_width="221dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="84dp"
-        android:src="@drawable/mountains"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toEndOf="@+id/line3"
-        app:layout_constraintTop_toTopOf="@id/userInfoCardView" />
-
-    <View
-        android:id="@+id/line5"
-        android:layout_width="96dp"
-        android:layout_height="3dp"
-        android:layout_marginBottom="24dp"
-        android:background="#1f314a"
-        app:layout_constraintBottom_toBottomOf="@+id/mindIcon"
-        app:layout_constraintEnd_toStartOf="@+id/line6" />
-
-    <ImageView
-        android:id="@+id/line6"
-        android:layout_width="46dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="8dp"
-        android:rotation="180"
-        android:src="@drawable/line2"
-        app:layout_constraintEnd_toStartOf="@+id/tree"
-        app:layout_constraintTop_toBottomOf="@+id/mountains" />
-
-    <ImageView
-        android:id="@+id/line7"
-        android:layout_width="30dp"
-        android:layout_height="140dp"
-        android:rotation="270"
-        android:src="@drawable/line2"
-        app:layout_constraintEnd_toStartOf="@+id/tree"
-        app:layout_constraintHorizontal_bias="0.395"
-        app:layout_constraintStart_toEndOf="@+id/selfAwareness"
-        app:layout_constraintTop_toBottomOf="@+id/mindBtn" />
-
-    <Button
-        android:id="@+id/selfAwarenessBtn"
-        android:layout_width="118dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/white_round_button_background"
-        android:text="Self-Awareness"
-        android:textAllCaps="false"
-        android:textColor="#1f314a"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/selfAwareness" />
-
-    <Button
-        android:id="@+id/mindBtn"
-        android:layout_width="118dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/white_round_button_background"
-        android:text="Mind-Mapping"
-        android:textAllCaps="false"
-        android:textColor="#1f314a"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mindIcon" />
-
-    <Button
-        android:id="@+id/personalBtn"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="132dp"
-        android:background="@drawable/white_round_button_background"
-        android:text="Personal-Branding"
-        android:textAllCaps="false"
-        android:textColor="#1f314a"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.718"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mountains" />
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
