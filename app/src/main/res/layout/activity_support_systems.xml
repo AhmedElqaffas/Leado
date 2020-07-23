@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mainNavigation.Fragments.HomeFragment"
+    android:background="#d2fcfa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d2fcfa">
+
+        <ImageView
+            android:id="@+id/book_shelf_image"
+            android:layout_width="46dp"
+            android:layout_height="75dp"
+            android:src="@drawable/empty_shelf_design"
+            app:layout_constraintBottom_toTopOf="@+id/course_video_player"
+            app:layout_constraintEnd_toStartOf="@+id/supportText"
+            app:layout_constraintHorizontal_bias="0.426"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.209" />
+
+        <SurfaceView
+            android:id="@+id/course_video_player"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.344" />
+
+        <TextView
+            android:id="@+id/supportText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Support Systems"
+            android:textColor="#1f314a"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/course_video_player"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.234" />
+
+
+        <LinearLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.141"
+            app:layout_constraintStart_toEndOf="@+id/lesson_number_card"
+            app:layout_constraintTop_toBottomOf="@+id/supportText">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/progress_card_1"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="11dp"
+                android:backgroundTint="#00DC84"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toEndOf="@+id/book_shelf_image"
+                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/progress_card_2"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#9A9C9C9C"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toEndOf="@+id/progress_card_1"
+                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/progress_card_3"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#9A9C9C9C"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toEndOf="@+id/progress_card_2"
+                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/progress_card_4"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#9A9C9C9C"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toEndOf="@+id/progress_card_3"
+                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/progress_card_5"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#9A9C9C9C"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toEndOf="@+id/progress_card_4"
+                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lesson_number_card"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:visibility="visible"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/course_video_player"
+            app:layout_constraintEnd_toStartOf="@+id/supportText"
+            app:layout_constraintHorizontal_bias="0.425"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_shelf_image"
+            app:layout_constraintVertical_bias="0.128">
+
+            <TextView
+                android:id="@+id/lesson_number_text"
+                android:layout_width="60dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="5dp"
+                android:text="Lesson 1"
+                android:textColor="#1f314a"
+                android:textSize="14sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lesson_details_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_video_player">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lesson_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Introduction"
+                    android:textColor="#1f314a"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.062"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lesson_description_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:text="The first building block of emotional intelligence is self-awareness. Self-awareness is our ability to recognize our own emotions and their effects on us and others. Without being aware of and understanding our own emotions, it will be difficult for us to move into the other emotional competencies like self-management, social awareness, or team leadership.Self-improvement is also referred to as personal-development can be said as the improvement to one’s own mind and characterthrough one’s own efforts. It is a conscious process where one decides to take oneself in hand and change their life-for the better(introduction to self improvement)."
+                    android:textColor="#1f314a"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lesson_title_text"
+                    app:layout_constraintVertical_bias="0.2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
