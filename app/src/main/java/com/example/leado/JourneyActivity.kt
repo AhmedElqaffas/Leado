@@ -64,7 +64,7 @@ class JourneyActivity : AppCompatActivity() {
     }
 
     private fun populateLessonsRecyclerView(lessons :List<Lesson>) {
-        lessons_recyclerView.adapter = LessonsRecyclerViewAdapter(baseContext,lessons)
+        lessons_recyclerView.adapter = LessonsRecyclerViewAdapter(this,lessons)
     }
 
     private fun getFakeSections() : List<Section>{

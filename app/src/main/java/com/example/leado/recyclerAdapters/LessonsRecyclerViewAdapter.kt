@@ -1,11 +1,13 @@
 package com.example.leado.recyclerAdapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.R
+import com.example.leado.SupportSystemsActivity
 import com.example.leado.data.Lesson
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
@@ -30,6 +32,10 @@ class LessonsRecyclerViewAdapter (val context: Context, val lessons : List<Lesso
                     "Start"
                 else
                     "Locked"
+
+            itemView.button_start.setOnClickListener {
+                context.startActivity(Intent(context,SupportSystemsActivity::class.java))
+            }
 
         }
     }
