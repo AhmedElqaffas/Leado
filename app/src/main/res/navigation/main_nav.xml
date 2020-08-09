@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.leado.mainNavigation.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_achievementsFragment"
+            app:destination="@id/achievements" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievements"
+        android:name="com.example.leado.mainNavigation.fragments.achievements.AchievementsFragment"
+        android:label="fragment_achievements"
+        tools:layout="@layout/fragment_achievements" >
+        <action
+            android:id="@+id/action_achievementsFragment_to_profileFragment"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.leado.mainNavigation.fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+</navigation>
