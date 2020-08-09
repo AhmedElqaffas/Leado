@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.leado.Achievement
+import com.example.leado.data.Achievement
 import com.example.leado.R
 import kotlinx.android.synthetic.main.item_profile_achievement.view.*
 
