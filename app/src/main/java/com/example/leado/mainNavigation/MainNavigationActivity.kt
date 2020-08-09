@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.leado.R

@@ -7,20 +7,11 @@
     <fragment
         android:id="@+id/home"
         android:name="com.example.leado.mainNavigation.fragments.HomeFragment"
-        android:label="HomeFragment" >
-        <action
-            android:id="@+id/action_homeFragment_to_achievementsFragment"
-            app:destination="@id/achievements" />
-    </fragment>
+        android:label="HomeFragment" />
     <fragment
-        android:id="@+id/achievements"
+        android:id="@+id/badges"
         android:name="com.example.leado.mainNavigation.fragments.achievements.AchievementsFragment"
-        android:label="fragment_achievements"
-        tools:layout="@layout/fragment_achievements" >
-        <action
-            android:id="@+id/action_achievementsFragment_to_profileFragment"
-            app:destination="@id/profile" />
-    </fragment>
+        android:label="AchievementsFragment" />
     <fragment
         android:id="@+id/profile"
         android:name="com.example.leado.mainNavigation.fragments.ProfileFragment"

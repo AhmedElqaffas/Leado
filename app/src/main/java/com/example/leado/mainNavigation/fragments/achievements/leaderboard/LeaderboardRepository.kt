@@ -47,6 +47,7 @@ object LeaderboardRepository {
 
     private val leaderboardLiveData: MutableLiveData<List<Person>> = MutableLiveData()
 
+
     fun getLeaderboard(): LiveData<List<Person>>{
         sortFakeList(
             dataList

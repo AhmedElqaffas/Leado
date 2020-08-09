@@ -6,7 +6,7 @@
         android:title="home"/>
 
     <item
-        android:id="@+id/achievements"
+        android:id="@+id/badges"
         android:icon="@drawable/achievements_navigation_icon"
         android:title="achievements"/>
 

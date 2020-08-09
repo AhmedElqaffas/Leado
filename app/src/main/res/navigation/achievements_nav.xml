@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/achievements_nav"
+    app:startDestination="@id/leaderboardFragment">
+
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.example.leado.mainNavigation.fragments.achievements.leaderboard.LeaderboardFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" >
+    </fragment>
+    <fragment
+        android:id="@+id/badgesFragment"
+        android:name="com.example.leado.mainNavigation.fragments.achievements.badges.BadgesFragment"
+        android:label="BadgesFragment" >
+    </fragment>
+</navigation>

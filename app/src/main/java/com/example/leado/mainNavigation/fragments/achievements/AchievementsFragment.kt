@@ -1,38 +1,43 @@
 package com.example.leado.mainNavigation.fragments.achievements
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation.findNavController
 import com.example.leado.R
-import com.example.leado.mainNavigation.fragments.achievements.leaderboard.LeaderboardFragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_achievements.*
 
 class AchievementsFragment : Fragment() {
 
+    private lateinit var controller: NavController
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
-
         return inflater.inflate(R.layout.fragment_achievements, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setInitialTab()
         setTabLayoutListener()
-        if(savedInstanceState == null) {
-            chooseLeaderboardTabByDefault()
-        }
     }
 
     private fun setTabLayoutListener(){
         tabLayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
+                controller = findNavController(achievementsFragmentsContainer)
                 when(tab?.position){
-                    0 -> showBadgesFragment()
-                    1 -> showLeaderboardFragment()
+                    0 -> {
+                            controller.navigate(R.id.badgesFragment)
+                    }
+                    1 -> {
+                        controller.navigate(R.id.leaderboardFragment)
+                    }
                 }
             }
             override fun onTabReselected(tab: TabLayout.Tab?) {
@@ -44,24 +49,7 @@ class AchievementsFragment : Fragment() {
         })
     }
 
-    /**
-     * Currently, this function removes the leaderboard fragment if present. The code should be
-     * adjusted to show badges fragment if it is required to have a badges fragment
-     */
-    private fun showBadgesFragment(){
-        val leaderboardFragment = childFragmentManager.findFragmentByTag("com/example/leado/mainNavigation/fragments/achievements/leaderboard")
-        leaderboardFragment?.let{
-            childFragmentManager.beginTransaction().remove(it).commit()
-        }
-    }
-
-    private fun showLeaderboardFragment(){
-        childFragmentManager.beginTransaction().replace(R.id.frameLayout,
-            LeaderboardFragment(),
-            "com/example/leado/mainNavigation/fragments/achievements/leaderboard").commit()
-    }
-
-    private fun chooseLeaderboardTabByDefault(){
+    private fun setInitialTab(){
         tabLayout.selectTab(tabLayout.getTabAt(1))
     }
 

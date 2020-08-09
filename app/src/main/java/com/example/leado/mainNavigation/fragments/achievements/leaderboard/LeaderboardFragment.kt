@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.leado.R
 import com.example.leado.mainNavigation.fragments.achievements.leaderboard.LeaderboardRepository
 import com.example.leado.recyclerAdapters.LeaderboardRecyclerAdapter
