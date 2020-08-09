@@ -53,24 +53,9 @@ class ProfileFragment : Fragment() {
                 "To test more recycler elements"
             ),
             Achievement(
-                R.drawable.achievement1_icon, "LAST ONE",
-                "I HOPE"
-            ),
-
-            Achievement(
-                R.drawable.achievement1_icon, "LAST ONE",
-                "I HOPE"
-            ),
-            Achievement(
-                R.drawable.achievement1_icon, "LAST ONE",
-                "I HOPE"
-            ),
-
-            Achievement(
-                R.drawable.achievement1_icon, "LAST ONE",
-                "I HOPE"
+                R.drawable.achievement1_icon, "Iron Man",
+                "Finished a course in less than a week"
             )
-
         )
 
         profileAchievementsRecyclerView.adapter = AchievementsRecyclerAdapter(temporaryList)

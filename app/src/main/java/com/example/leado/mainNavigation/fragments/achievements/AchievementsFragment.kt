@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.leado.R
+import com.example.leado.mainNavigation.fragments.achievements.leaderboard.LeaderboardFragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_achievements.*
 
@@ -21,7 +22,9 @@ class AchievementsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setTabLayoutListener()
-        chooseLeaderboardTabByDefault()
+        if(savedInstanceState == null) {
+            chooseLeaderboardTabByDefault()
+        }
     }
 
     private fun setTabLayoutListener(){
@@ -46,15 +49,16 @@ class AchievementsFragment : Fragment() {
      * adjusted to show badges fragment if it is required to have a badges fragment
      */
     private fun showBadgesFragment(){
-        val leaderboardFragment = childFragmentManager.findFragmentByTag("leaderboard")
+        val leaderboardFragment = childFragmentManager.findFragmentByTag("com/example/leado/mainNavigation/fragments/achievements/leaderboard")
         leaderboardFragment?.let{
             childFragmentManager.beginTransaction().remove(it).commit()
         }
     }
 
     private fun showLeaderboardFragment(){
-        childFragmentManager.beginTransaction().replace(R.id.frameLayout, LeaderboardFragment(),
-            "leaderboard").commit()
+        childFragmentManager.beginTransaction().replace(R.id.frameLayout,
+            LeaderboardFragment(),
+            "com/example/leado/mainNavigation/fragments/achievements/leaderboard").commit()
     }
 
     private fun chooseLeaderboardTabByDefault(){
