@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.leado.Person
+import com.example.leado.data.Person
 import com.example.leado.R
 import kotlinx.android.synthetic.main.item_leaderboard.view.*
 import java.text.NumberFormat
