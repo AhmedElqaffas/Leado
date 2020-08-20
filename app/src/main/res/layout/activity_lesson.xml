@@ -69,8 +69,8 @@
                 android:layout_width="30dp"
                 android:layout_height="10dp"
                 android:layout_marginTop="11dp"
-                android:backgroundTint="#00DC84"
                 android:visibility="visible"
+                app:cardBackgroundColor="#00DC84"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/book_shelf_image"
                 app:layout_constraintTop_toBottomOf="@+id/lessonText" />
@@ -81,8 +81,8 @@
                 android:layout_height="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#9A9C9C9C"
                 android:visibility="visible"
+                app:cardBackgroundColor="#9A9C9C9C"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_1"
                 app:layout_constraintTop_toBottomOf="@+id/lessonText" />
@@ -93,8 +93,8 @@
                 android:layout_height="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#9A9C9C9C"
                 android:visibility="visible"
+                app:cardBackgroundColor="#9A9C9C9C"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_2"
                 app:layout_constraintTop_toBottomOf="@+id/lessonText" />
@@ -105,8 +105,8 @@
                 android:layout_height="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#9A9C9C9C"
                 android:visibility="visible"
+                app:cardBackgroundColor="#9A9C9C9C"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_3"
                 app:layout_constraintTop_toBottomOf="@+id/lessonText" />
@@ -117,8 +117,8 @@
                 android:layout_height="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#9A9C9C9C"
                 android:visibility="visible"
+                app:cardBackgroundColor="#9A9C9C9C"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_4"
                 app:layout_constraintTop_toBottomOf="@+id/lessonText" />

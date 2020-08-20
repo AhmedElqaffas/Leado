@@ -37,7 +37,7 @@ class LessonsRecyclerViewAdapter (val context: Context, val lessons : List<Lesso
                 val intent = Intent(context,LessonActivity::class.java)
                 intent.putExtra("Section Name",lesson.sectionName)
                 intent.putExtra("Lesson Name",lesson.name)
-                intent.putExtra("Lesson Number",lesson.name.last().toInt())
+                intent.putExtra("Lesson Number",lesson.name.last().toInt()-'0'.toInt())
 
                 context.startActivity(intent)
             }
