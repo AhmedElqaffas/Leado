@@ -20,7 +20,7 @@
             android:layout_height="75dp"
             android:src="@drawable/empty_shelf_design"
             app:layout_constraintBottom_toTopOf="@+id/course_video_player"
-            app:layout_constraintEnd_toStartOf="@+id/supportText"
+            app:layout_constraintEnd_toStartOf="@+id/lessonText"
             app:layout_constraintHorizontal_bias="0.426"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +38,7 @@
             app:layout_constraintVertical_bias="0.344" />
 
         <TextView
-            android:id="@+id/supportText"
+            android:id="@+id/lessonText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Support Systems"
@@ -62,7 +62,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.141"
             app:layout_constraintStart_toEndOf="@+id/lesson_number_card"
-            app:layout_constraintTop_toBottomOf="@+id/supportText">
+            app:layout_constraintTop_toBottomOf="@+id/lessonText">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/progress_card_1"
@@ -73,7 +73,7 @@
                 android:visibility="visible"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/book_shelf_image"
-                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+                app:layout_constraintTop_toBottomOf="@+id/lessonText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/progress_card_2"
@@ -85,7 +85,7 @@
                 android:visibility="visible"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_1"
-                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+                app:layout_constraintTop_toBottomOf="@+id/lessonText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/progress_card_3"
@@ -97,7 +97,7 @@
                 android:visibility="visible"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_2"
-                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+                app:layout_constraintTop_toBottomOf="@+id/lessonText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/progress_card_4"
@@ -109,7 +109,7 @@
                 android:visibility="visible"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_3"
-                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+                app:layout_constraintTop_toBottomOf="@+id/lessonText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/progress_card_5"
@@ -121,7 +121,7 @@
                 android:visibility="visible"
                 app:cardCornerRadius="4dp"
                 app:layout_constraintStart_toEndOf="@+id/progress_card_4"
-                app:layout_constraintTop_toBottomOf="@+id/supportText" />
+                app:layout_constraintTop_toBottomOf="@+id/lessonText" />
 
         </LinearLayout>
 
@@ -133,7 +133,7 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:layout_constraintBottom_toTopOf="@+id/course_video_player"
-            app:layout_constraintEnd_toStartOf="@+id/supportText"
+            app:layout_constraintEnd_toStartOf="@+id/lessonText"
             app:layout_constraintHorizontal_bias="0.425"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/book_shelf_image"

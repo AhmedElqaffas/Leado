@@ -20,8 +20,9 @@ class JourneyActivity : AppCompatActivity() {
         setSections(getFakeSections())
 
         getFakeLessons("Support Systems")?.let { populateLessonsRecyclerView(it) }
-        textView_courseName.text = "Self-awareness"
-        textView_roomName.text = "Awareness Room"
+
+        textView_courseName.text = intent.getStringExtra("Course Name")
+        textView_roomName.text = textView_courseName.text.toString() +" Room"
     }
 
 

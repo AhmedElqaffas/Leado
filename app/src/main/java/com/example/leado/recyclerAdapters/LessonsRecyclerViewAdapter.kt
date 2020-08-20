@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.R
-import com.example.leado.SupportSystemsActivity
+import com.example.leado.LessonActivity
 import com.example.leado.data.Lesson
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
@@ -34,7 +34,12 @@ class LessonsRecyclerViewAdapter (val context: Context, val lessons : List<Lesso
                     "Locked"
 
             itemView.button_start.setOnClickListener {
-                context.startActivity(Intent(context,SupportSystemsActivity::class.java))
+                val intent = Intent(context,LessonActivity::class.java)
+                intent.putExtra("Section Name",lesson.sectionName)
+                intent.putExtra("Lesson Name",lesson.name)
+                intent.putExtra("Lesson Number",lesson.name.last().toInt())
+
+                context.startActivity(intent)
             }
 
         }
