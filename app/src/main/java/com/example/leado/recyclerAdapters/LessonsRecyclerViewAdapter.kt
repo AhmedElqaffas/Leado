@@ -20,15 +20,15 @@ class LessonsRecyclerViewAdapter (val context: Context, val lessons : List<Lesso
             itemView.textView_sectionName.text = lesson.sectionName
             itemView.textView_lessonName.text = lesson.name
             itemView.textview_lessonDescription.text = lesson.description
-            itemView.button_start.isActivated = lesson.available
+            itemView.button_start.isEnabled = lesson.available
             itemView.button_start.setBackgroundResource(
-                if(itemView.button_start.isActivated)
+                if(itemView.button_start.isEnabled)
                     R.drawable.rounded_background_active
                 else
                     R.drawable.rounded_background_inactive
             )
             itemView.button_start.text =
-                if(itemView.button_start.isActivated)
+                if(itemView.button_start.isEnabled)
                     "Start"
                 else
                     "Locked"
