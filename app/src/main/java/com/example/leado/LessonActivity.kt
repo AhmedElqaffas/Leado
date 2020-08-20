@@ -4,18 +4,19 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.SurfaceHolder
-import android.view.SurfaceView
-import kotlinx.android.synthetic.main.activity_support_systems.*
+import kotlinx.android.synthetic.main.activity_journey.*
+import kotlinx.android.synthetic.main.activity_lesson.*
 
-class SupportSystemsActivity : AppCompatActivity(), SurfaceHolder.Callback {
+class LessonActivity : AppCompatActivity(), SurfaceHolder.Callback {
     lateinit var mediaPlayer : MediaPlayer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_support_systems)
+        setContentView(R.layout.activity_lesson)
             var surfaceHolder = course_video_player.holder
             surfaceHolder.setFixedSize(800, 500)
             surfaceHolder.addCallback(this)
             mediaPlayer = MediaPlayer.create(this, R.raw.sample_video)
+
 
     }
 
@@ -38,4 +39,14 @@ class SupportSystemsActivity : AppCompatActivity(), SurfaceHolder.Callback {
         super.onPause()
 
     }
+
+    private fun setCourseProgress(progress:Int) {
+        progress_card_1.setBackgroundResource(getProgressBackground(true))
+        progress_card_2.setBackgroundResource(getProgressBackground(progress>=2))
+        progress_card_3.setBackgroundResource(getProgressBackground(progress>=3))
+        progress_card_4.setBackgroundResource(getProgressBackground(progress>=4))
+    }
+    private fun getProgressBackground(isActive : Boolean) = if(isActive) R.drawable.rounded_background_active
+    else R.drawable.rounded_background_inactive
+
 }

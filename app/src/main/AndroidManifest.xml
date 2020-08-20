@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".JourneyActivity"></activity>
-        <activity android:name=".SupportSystemsActivity"></activity>
+        <activity android:name=".LessonActivity"></activity>
         <activity android:name=".mainNavigation.MainNavigationActivity" />
         <activity android:name=".CongratsActivity" />
         <activity android:name=".MainActivity">

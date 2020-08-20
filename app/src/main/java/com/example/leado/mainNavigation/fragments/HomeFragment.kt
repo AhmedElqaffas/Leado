@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.leado.JourneyActivity
 import com.example.leado.R
-import com.example.leado.SupportSystemsActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -21,8 +20,17 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val intent = Intent(context, JourneyActivity::class.java)
         selfAwarenessBtn.setOnClickListener{
-            val intent = Intent(context, JourneyActivity::class.java)
+            intent.putExtra("Course Name",selfAwarenessBtn.text.toString())
+            startActivity(intent)
+        }
+        mindBtn.setOnClickListener{
+            intent.putExtra("Course Name",mindBtn.text.toString())
+            startActivity(intent)
+        }
+        personalBtn.setOnClickListener{
+            intent.putExtra("Course Name",personalBtn.text.toString())
             startActivity(intent)
         }
     }
